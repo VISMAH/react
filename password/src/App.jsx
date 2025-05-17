@@ -14,6 +14,8 @@ function App() {
    // use ref hook 
     const passwordref = useRef(null)
 
+    //use callback
+
    const passwordgenerator = useCallback(()=>{
     let pass="";
     let str="ABCDEFGHIJKLMNOPQIURSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -31,13 +33,17 @@ function App() {
     
 
    } ,[length, number, char,setpassword])
+    
 
+    // use ref
    const copyPasswordToClipboard =useCallback(()=>{
     passwordref.current?.select();
     passwordref.current?.setselectrange(0,99);
     window.navigator.clipboard.writeText(Password)
 
    },[Password])
+
+   // use effect 
 
    useEffect(()=>{
     passwordgenerator()
@@ -96,6 +102,7 @@ function App() {
 
 
    </div>
+   
    <div className='flex items-center gap-x-1'>
    <input
      type="Checkbox"

@@ -1,0 +1,14 @@
+@import "tailwindcss";
+#root {
+  flex: auto;
+  justify-items: center;
+}
+.btn{
+  background: blue 500px ;
+  
+
+  
+
+}
+
+
